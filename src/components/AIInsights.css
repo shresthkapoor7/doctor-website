@@ -1,0 +1,331 @@
+.ai-insights {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.insights-header {
+  margin-bottom: 24px;
+}
+
+.insights-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.insights-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.risk-analysis, .trend-analysis {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.risk-analysis h3, .trend-analysis h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.risk-stats, .trend-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.risk-stat, .trend-stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.risk-number, .trend-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.risk-label, .trend-label {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.trend-icon {
+  color: #10b981;
+}
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.insight-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.insight-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.insight-card.risk {
+  border-left: 4px solid #ef4444;
+}
+
+.insight-card.improvement {
+  border-left: 4px solid #10b981;
+}
+
+.insight-card.recommendation {
+  border-left: 4px solid #3b82f6;
+}
+
+.insight-card.monitoring {
+  border-left: 4px solid #f59e0b;
+}
+
+.insight-card.alert {
+  border-left: 4px solid #8b5cf6;
+}
+
+.insight-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.insight-header:hover {
+  background: #f8fafc;
+}
+
+.insight-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.insight-content {
+  flex: 1;
+}
+
+.insight-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+
+.insight-summary {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.insight-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.insight-priority {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.insight-card.risk .insight-priority {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.insight-card.improvement .insight-priority {
+  background: #f0fdf4;
+  color: #065f46;
+}
+
+.insight-card.recommendation .insight-priority {
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+.insight-card.monitoring .insight-priority {
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.insight-card.alert .insight-priority {
+  background: #f3e8ff;
+  color: #6b21a8;
+}
+
+.insight-details {
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.insight-metrics, .insight-recommendations, .insight-timeline {
+  margin-bottom: 20px;
+}
+
+.insight-metrics h4, .insight-recommendations h4, .insight-timeline h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.metric-item {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.metric-change {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.metric-change.positive {
+  color: #10b981;
+}
+
+.metric-change.negative {
+  color: #ef4444;
+}
+
+.recommendations-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recommendation-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.rec-icon {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.timeline-marker {
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.timeline-date {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.timeline-event {
+  font-size: 14px;
+  color: #1e293b;
+}
+
+@media (max-width: 768px) {
+  .insights-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .risk-stats, .trend-stats {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .insight-header {
+    padding: 16px;
+  }
+  
+  .insight-details {
+    padding: 0 16px 16px 16px;
+  }
+}
