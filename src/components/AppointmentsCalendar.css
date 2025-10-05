@@ -1,0 +1,88 @@
+.calendar-wrap {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cal-btn {
+  background: #e5e7eb;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.cal-dow {
+  text-align: center;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.cal-cell {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  min-height: 80px;
+  border-radius: 8px;
+  position: relative;
+  padding: 6px;
+}
+
+.cal-cell.day { cursor: pointer; }
+.cal-cell.day.selected { outline: 2px solid #3b82f6; }
+
+.cal-daynum {
+  font-weight: 600;
+}
+
+.cal-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.calendar-list {
+  margin-top: 16px;
+}
+
+.apt-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.apt-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  margin-bottom: 8px;
+}
+
+.apt-item .time { font-weight: 600; color: #1e293b; }
+.muted { color: #64748b; }
+
+.apt-main { display: flex; flex-direction: column; gap: 2px; }
+.apt-title { font-weight: 600; color: #1e293b; }
+.apt-sub { color: #64748b; font-size: 12px; }
+.apt-summary { color: #334155; font-size: 13px; }

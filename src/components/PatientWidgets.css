@@ -253,15 +253,31 @@
   color: #64748b;
 }
 
+.patient-overview-container {
+  display: flex;
+  gap: 20px;
+}
+
+.patient-list-container {
+  flex: 1;
+}
+
+.patient-detail-container {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 @media (max-width: 768px) {
   .patients-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .vitals-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .info-grid {
     grid-template-columns: 1fr;
   }

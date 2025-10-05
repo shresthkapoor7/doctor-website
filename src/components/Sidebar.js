@@ -1,21 +1,15 @@
 import React from 'react';
-import { 
-  LayoutDashboard, 
-  Users, 
-  Brain, 
-  Calendar, 
-  FileText, 
-  Settings 
+import {
+  LayoutDashboard,
+  Calendar,
+  Settings
 } from 'lucide-react';
 import './Sidebar.css';
 
 const Sidebar = ({ activeTab, setActiveTab }) => {
   const menuItems = [
     { id: 'overview', label: 'Overview', icon: LayoutDashboard },
-    { id: 'patients', label: 'Patients', icon: Users },
-    { id: 'insights', label: 'AI Insights', icon: Brain },
     { id: 'appointments', label: 'Appointments', icon: Calendar },
-    { id: 'reports', label: 'Reports', icon: FileText },
     { id: 'settings', label: 'Settings', icon: Settings },
   ];
 

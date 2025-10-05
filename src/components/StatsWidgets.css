@@ -29,6 +29,8 @@
   transform: translateY(-2px);
 }
 
+.stat-card.clickable { cursor: pointer; }
+
 .stat-header {
   display: flex;
   justify-content: space-between;
@@ -85,11 +87,11 @@
   .stats-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .stat-card {
     padding: 20px;
   }
-  
+
   .stat-value {
     font-size: 28px;
   }
