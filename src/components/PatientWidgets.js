@@ -3,6 +3,14 @@ import { User, Heart, Footprints, Flame, Milestone } from 'lucide-react';
 import './PatientWidgets.css';
 import PatientDetail from './PatientDetail';
 
+const formatMetric = (value, unit) => {
+  if (value === null || value === undefined || value === '') return 'N/A';
+  const num = parseFloat(value);
+  if (Number.isNaN(num)) return 'N/A';
+  const display = Number.isInteger(num) ? num : num.toFixed(1);
+  return `${display} ${unit}`;
+};
+
 const PatientWidgets = ({ patients }) => {
   const [selectedPatient, setSelectedPatient] = useState(null);
 
@@ -37,22 +45,22 @@ const PatientWidgets = ({ patients }) => {
                       <div className="vital-item">
                         <Footprints size={16} />
                         <span className="vital-label">Step Count</span>
-                        <span className="vital-value">{patient.healthData.step_count || 'N/A'}</span>
+                        <span className="vital-value">{patient.healthData.step_count ?? 'N/A'}</span>
                       </div>
                       <div className="vital-item">
                         <Heart size={16} />
                         <span className="vital-label">Heart Rate</span>
-                        <span className="vital-value">{patient.healthData.heart_rate_avg ? `${patient.healthData.heart_rate_avg} bpm` : 'N/A'}</span>
+                        <span className="vital-value">{formatMetric(patient.healthData.heart_rate_avg, 'bpm')}</span>
                       </div>
                       <div className="vital-item">
                         <Flame size={16} />
                         <span className="vital-label">Active Energy</span>
-                        <span className="vital-value">{patient.healthData.active_energy ? `${patient.healthData.active_energy} kcal` : 'N/A'}</span>
+                        <span className="vital-value">{formatMetric(patient.healthData.active_energy, 'kcal')}</span>
                       </div>
                       <div className="vital-item">
                         <Milestone size={16} />
                         <span className="vital-label">Distance</span>
-                        <span className="vital-value">{patient.healthData.distance ? `${patient.healthData.distance} km` : 'N/A'}</span>
+                        <span className="vital-value">{formatMetric(patient.healthData.distance, 'km')}</span>
                       </div>
                   </div>
                 </div>

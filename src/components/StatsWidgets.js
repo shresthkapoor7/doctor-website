@@ -45,11 +45,14 @@ const StatsWidgets = ({ appointments }) => {
     }
   ];
 
+  // Hide any stats that don't have a real value
+  const visibleStats = stats.filter((stat) => stat.value !== 'N/A');
+
   return (
     <div className="stats-widgets">
       <h2 className="stats-title">Appointment Statistics</h2>
       <div className="stats-grid">
-        {stats.map((stat, index) => {
+        {visibleStats.map((stat, index) => {
           const Icon = stat.icon;
           const clickable = Boolean(stat.onClick);
           return (
